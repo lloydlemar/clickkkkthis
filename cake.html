@@ -53,34 +53,15 @@
         </div>
 
         <!-- Birthday text below cake -->
-        <h1 class="birthday-text mt-4">Happy Birthday <span>Antonete</span> 🎂</h1>
+        <h1 class="birthday-text mt-4">Happy Birthday <span>Antonnete</span> 🎂</h1>
       </div>
     </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-  <script>
-    const audio = document.getElementById('birthday-audio');
 
-    // Try autoplay for desktop
-    window.addEventListener('load', () => {
-      audio.play().catch(() => {
-        console.log("Autoplay blocked. User interaction needed.");
-      });
-    });
-
-    // Mobile-friendly: play on first user interaction
-    function playAudio() {
-      audio.play().catch(() => console.log("Playback failed"));
-      // Remove listener after first interaction
-      window.removeEventListener('click', playAudio);
-      window.removeEventListener('touchstart', playAudio);
-    }
-
-    window.addEventListener('click', playAudio);
-    window.addEventListener('touchstart', playAudio);
-  </script>
 </body>
 </html>
+
 
