@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secret HAHAHHAHA</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Gift Box -->
+  <div class="gift-box" id="gift">
+    <div class="lid"></div>
+  </div>
+
+  <script>
+    const gift = document.getElementById("gift");
+
+    gift.addEventListener("click", () => {
+      // Gift pop effect
+      gift.classList.add("pop");
+
+      // Generate confetti
+      for (let i = 0; i < 50; i++) {
+        const confetti = document.createElement("div");
+        confetti.classList.add("confetti");
+        document.body.appendChild(confetti);
+
+        confetti.style.left = Math.random() * window.innerWidth + "px";
+        confetti.style.top = "-10px";
+        confetti.style.background = ["#f06292","#f48fb1","#ba68c8","#81d4fa","#ffeb3b","#ff8a65","#ffd54f"][Math.floor(Math.random()*7)];
+        confetti.style.animationDuration = (2 + Math.random() * 2) + "s";
+        confetti.style.width = confetti.style.height = (5 + Math.random() * 10) + "px";
+
+        setTimeout(() => confetti.remove(), 4000);
+      }
+
+      // Redirect after 2 seconds
+      setTimeout(() => {
+        window.location.href = "cake.html";
+      }, 2000);
+    });
+  </script>
+
+</body>
+</html>
